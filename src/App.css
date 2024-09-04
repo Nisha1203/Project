@@ -1,38 +1,206 @@
-.App {
+/* App.css */
+
+/* General Styles */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; /* Full height */
+}
+
+.loading-image {
+  width: 250px; /* Adjust the size as needed */
+  height: 250px;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif; /* Modern and clean font */
+  font-size: 36px; /* Larger font size for prominence */
+  color: #333; /* Dark color for readability */
+  text-align: center; /* Center the heading */
+  text-transform: uppercase; /* Make the text all uppercase */
+  letter-spacing: 2px; /* Add some space between the letters */
+  margin-bottom: 20px; /* Add some space below the heading */
+  position: relative; /* For positioning the decorative elements */
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #c1d5de;
+  color: #333;
+}
+
+h1,
+h2 {
   text-align: center;
+  color: #444;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Loading State */
+h1 {
+  margin-top: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Stories Container */
+.stories-div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+/* Card Styles */
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+  font-size: 18px;
+  margin-bottom: 4px;
+  color: #003b7b;
+}
+
+.card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 9px;
+}
+
+.card span {
+  font-weight: bold;
+}
+
+/* Card Button Styles */
+.card-button {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-button a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #353772;
+  padding: 17px 20px;
+}
+
+.card-button a:hover {
+  transform: scale(1.05);
+}
+
+.card-button a:nth-child(2) {
+  color: #dc3545;
+}
+
+.card-button a:nth-child(2):hover {
+  color: #c82333;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .card {
+    padding: 20px;
+    margin-bottom: 15px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .card h2 {
+    font-size: 1.5rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  .card-button a {
+    padding: 10px 15px;
+    font-size: 0.95rem;
+  }
+}
+.pagination_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination_btn button {
+  background-color: #353772;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination_btn button:hover {
+  background-color: #0056b3;
+}
+
+.pagination_btn p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 10px;
+}
+
+/* App.css */
+
+/* Search Container */
+form {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+form div {
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+input[type="text"]::placeholder {
+  color: #999;
+  font-size: 0.95rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  input[type="text"] {
+    font-size: 0.9rem;
+    padding: 10px 15px;
   }
 }
